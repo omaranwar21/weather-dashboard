@@ -1,4 +1,4 @@
-const apiKey = "YOUR_OPENWEATHERMAP_API_KEY";
+const apiKey = "VWzubvpGfyabBfBYNNFUZQDRpaq8lNIv";
 const cityList = document.getElementById("city-list");
 const cityFav = document.getElementById("city-fav");
 const cityInput = document.getElementById("city-search");
@@ -176,7 +176,7 @@ function renderFav() {
 }
 
 async function getWeather(city) {
-  const url = `https://api.tomorrow.io/v4/weather/forecast?location=${city}&timesteps=hourly&units=metric&apikey=VWzubvpGfyabBfBYNNFUZQDRpaq8lNIv`;
+  const url = `https://api.tomorrow.io/v4/weather/forecast?location=${city}&timesteps=hourly&units=metric&apikey=${apiKey}`;
   const options = {
     method: "GET",
     headers: {
