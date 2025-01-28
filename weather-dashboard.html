@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <!-- Linking CSS stylesheets for theming, navigation, and other sections -->
+    <link rel="stylesheet" href="/styles/theme.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/common.css">
+    <link rel="stylesheet" href="/styles/search-section.css">
+    <link rel="stylesheet" href="/styles/cities.css">
+    <link rel="stylesheet" href="/styles/weather-display.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1>Weather Dashboard</h1>
+        <ul class="navbar-list">
+            <!-- Dark mode toggle button -->
+            <li class="toggle-item">
+                <button type="button" id="toggle-dark-mode" title="Toggle Dark Mode">
+                    <i class="fa-regular fa-moon d-none toggle-icon"></i>
+                    <i class="fa-solid fa-cloud-sun d-none toggle-icon"></i>
+                </button>
+            </li>
+            <!-- Navigation links -->
+            <li class="nav-item">
+                <a href="#favorites">Favorites</a>
+            </li>
+            <li class="nav-item">
+                <a href="#history">History</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Search Section -->
+        <section class="search-section">
+            <input type="text" id="city-search" placeholder="Enter city name...">
+            <button id="search-button" type="button" title="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </section>
+
+        <!-- Weather Display Section -->
+        <section class="weather-display">
+            <div class="container">
+                <!-- Left-side Weather Information -->
+                <div class="weather-side">
+                    <div class="weather-gradient"></div>
+                    <!-- Date and Location Information -->
+                    <div class="date-container">
+                        <h2 class="date-dayname" id="day">-</h2>
+                        <span class="date-day" id="date">-</span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="location" id="city">-</span>
+                    </div>
+                    <!-- Current Weather Details -->
+                    <div class="weather-container">
+                        <h1 class="weather-temp temp" id="tempDetails">--°C</h1>
+                        <h3 class="weather-desc" id="weatherCondition">-</h3>
+                    </div>
+                </div>
+
+                <!-- Right-side Additional Info -->
+                <div class="info-side">
+                    <!-- Button to switch temperature unit -->
+                    <button class="switch-temp" title="change temperature unit" id="switch-temp">
+                        <i class="fa-solid fa-temperature-quarter"></i>
+                    </button>
+                    <!-- Detailed Weather Information -->
+                    <div class="today-info-container">
+                        <div class="today-info">
+                            <div class="temperature">
+                                <i class="fa-solid fa-temperature-half"></i>
+                                <span class="title">Temperature</span>
+                                <span class="value temp" id="temp">-- °c</span>
+                            </div>
+                            <div class="pressure">
+                                <i class="fa-solid fa-gauge-high"></i>
+                                <span class="title">Pressure</span>
+                                <span class="value" id="pressure">-- hPa</span>
+                            </div>
+                            <div class="humidity">
+                                <i class="fa-solid fa-droplet"></i>
+                                <span class="title">HUMIDITY</span>
+                                <span class="value" id="humidity">-- %</span>
+                            </div>
+                            <div class="wind">
+                                <i class="fa-solid fa-wind"></i>
+                                <span class="title">WIND SPEED</span>
+                                <span class="value" id="windSpeed">- km/h</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Button for fetching current location weather -->
+                    <div class="location-container">
+                        <button class="location-button" id="current-location-weather"
+                            title="Get Current Location weather">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Current Location</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <section id="history">
+                <h2 class="history-title">History</h2>
+                <!-- List of past searched cities -->
+                <ul class="city-list" id="city-list">
+                </ul>
+                <!-- Pagination for the history -->
+                <div class="pagination" id="pagination"></div>
+            </section>
+        </section>
+
+        <!-- Favorites Section -->
+        <section class="favorites-section" id="favorites">
+            <h2>Favorites</h2>
+            <section>
+                <!-- List of favorite cities -->
+                <ul class="city-list" id="city-fav">
+                </ul>
+                <!-- Pagination for favorites -->
+                <div class="pagination" id="pagination-fav"></div>
+            </section>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Powered by <a href="https://app.tomorrow.io/" target="_blank" rel="noopener noreferrer">Tommorrow.io
+                    API</a></p>
+        </footer>
+
+        <!-- JavaScript Files -->
+        <script src="/scripts/toggleTheme.js"></script>
+        <script src="/scripts/citiesList.js"></script>
+
+        <!-- FontAwesome Icons -->
+        <script src="https://kit.fontawesome.com/d6c851b5ab.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

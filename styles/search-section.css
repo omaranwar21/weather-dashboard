@@ -1,0 +1,43 @@
+.search-section {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-section input {
+  padding: 0.5rem;
+  border: 3px solid var(--text-color) !important;
+  color: var(--text-color);
+  background-color: transparent;
+  height: 2rem;
+  width: 60%;
+  border-radius: 10%;
+}
+
+.search-section input[type="text"]:focus {
+  border: 3px solid !important;
+  border-color: var(--yellow-color) !important;
+  outline: none;
+}
+
+#city-search::placeholder {
+  color: var(--text-color);
+}
+
+.search-section button {
+  padding: 0.8rem !important;
+  height: 100% !important;
+  font-size: larger;
+  background-color: var(--yellow-color);
+  color: var(--bg-color-primary);
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-section button:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color-primary);
+}

@@ -1,0 +1,35 @@
+:root {
+  --bg-color-primary: #ffffff;
+  --bg-color-secondary: #e0e1dd;
+  --text-color: #1b263b;
+  --yellow-color: #1b263b;
+  --hover-border-duration: 0.4s; /* Border Animation duration */
+  --hover-duration: 0.8s; /* Hover Animation duration */
+  --gradient: linear-gradient(135deg, #04292bb6 10%, #0d0d28ae 100%);
+}
+
+[data-theme="dark"] {
+  --bg-color-primary: #1b263b;
+  --bg-color-secondary: #778da9;
+  --yellow-color: #ffff00;
+  --text-color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color-primary);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  padding: 1rem;
+  text-align: center;
+}
