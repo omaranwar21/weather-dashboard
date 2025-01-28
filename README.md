@@ -8,7 +8,8 @@ A weather dashboard that provides detailed weather information for searched citi
 - **History:** Automatically save searched cities.
 - **Favorites:** Mark selected cities as favorites for quick access.
 - **Current Location Weather:** Retrieve and display weather data for your current location.
-
+- **Dark mode:** Toggling the theme between dark and light mode.
+  
 ## Installation
 
 ### Prerequisites
@@ -26,7 +27,7 @@ A weather dashboard that provides detailed weather information for searched citi
 
 2. Open the `weather-dashboard.html` file in your browser to launch the application.
 
-3. Replace `YOUR_API_KEY` in the JavaScript file with your Tomorrow.io API key:
+3. Open the `citiesList.js` file and replace `YOUR_API_KEY` in the JavaScript file with your Tomorrow.io API key:
 
    ```javascript
    const apiKey = "YOUR_API_KEY";
